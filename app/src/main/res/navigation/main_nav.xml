@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/driverFragment">
+
+    <fragment
+        android:id="@+id/driverFragment"
+        android:name="com.barker.takehomechallenge.ui.fragment.DriverFragment"
+        android:label="fragment_driver"
+        tools:layout="@layout/fragment_driver">
+        <action
+            android:id="@+id/action_driverFragment_to_routeFragment"
+            app:destination="@id/routeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/routeFragment"
+        android:name="com.barker.takehomechallenge.ui.fragment.RouteFragment"
+        android:label="fragment_route"
+        tools:layout="@layout/fragment_route">
+        <action
+            android:id="@+id/action_routeFragment_to_driverFragment"
+            app:destination="@id/driverFragment" />
+    </fragment>
+
+</navigation>
