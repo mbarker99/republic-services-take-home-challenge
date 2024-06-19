@@ -75,6 +75,7 @@ class DriverFragment : Fragment(R.layout.fragment_driver) {
 
         viewModel.getRoutesLiveData.observe(viewLifecycleOwner, Observer {
             viewModel.insertData(it.drivers, it.routes)
+            driverAdapter.setData(it.drivers)
         })
 
     }
